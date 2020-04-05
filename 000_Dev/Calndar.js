@@ -25,7 +25,7 @@
   const week = ["日", "月", "火", "水", "木", "金", "土"]
 
   const firstDay = new Date(year, month, 1)
-  const lastDay = new Date(year, `${ month + 1}`, 0)
+  const lastDay = new Date(year, `${month + 1}`, 0)
   const firstWeek = firstDay.getDay()
 
   document.write(`${year}/${month + 1}/${day}/${dayOfWeekStr}`)
@@ -36,7 +36,7 @@
     if (week[(firstWeek + index - 1) % 7] == "日" || week[(firstWeek + index - 1) % 7] == "土") {
       document.write(`<span class="weekEnd">${index}</span>`)
       document.write(`<span class="weekEnd">(${week[(firstWeek + index - 1) % 7]}) </span>`)
-    }else{
+    } else {
       document.write(`<span>${index}</span>`)
       document.write(`<span>(${week[(firstWeek + index - 1) % 7]}) </span>`)
     }
