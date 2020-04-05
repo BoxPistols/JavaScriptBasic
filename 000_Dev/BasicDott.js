@@ -50,7 +50,8 @@
 }
 
 {
-  document.querySelector(".todos > ul").addEventListener('click',e=>{
+  document.querySelector(".todos ul").addEventListener('click',e=>{
+    console.log( e.currentTarget)
     if(e.target.nodeName==='LI'){
       e.target.classList.toggle("moge")
     }
