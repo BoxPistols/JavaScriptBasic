@@ -33,7 +33,7 @@
 
   // Week View
   document.write(`<div class="weeks">`)
-  for (let index = (7 - firstWeek); index < lastDay.getDate(); index++) {
+  for (let index = 0; index < lastDay.getDate() - firstWeek - 1; index++) {
       document.write(`<div class="week">${week[(firstWeek + index) % 7]}</div>`)
     }
   document.write(`</div>`)
