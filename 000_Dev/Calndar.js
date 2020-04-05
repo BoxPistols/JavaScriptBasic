@@ -28,20 +28,39 @@
   const lastDay = new Date(year, `${month + 1}`, 0)
   const firstWeek = firstDay.getDay()
 
-  document.write(`${year}/${month + 1}/${day}/${dayOfWeekStr}`)
+  document.write(`<p>${year}/${month + 1}/${day}/${dayOfWeekStr} </p><br>`)
 
+  document.write(`<div class="clalArea">`)
 
+  // Week View
+  document.write(`<div class="weeks">`)
   for (let index = 1; index < lastDay.getDate() + 1; index++) {
-    let r = index % 7
+    document.write(`<div class="week">(${week[(firstWeek + index - 1) % 7]}) </div>`)
+  }
+  document.write(`</div>`)
+
+  // document.write(`<div class=""> <br><br> </div>`)
+
+  // day View
+  document.write(`<div class="days">`)
+  for (let index = 1; index < lastDay.getDate() + 1; index++) {
+    // let r = index % 7 document.write(`<span>(${week[(firstWeek + index - 1) % 7]}) </span>`)
+
+    if (index % 7 == 0) {
+      document.write(`<div class="break"></div>`)
+    }else{
+    document.write(`<div class="day">`)
     if (week[(firstWeek + index - 1) % 7] == "日" || week[(firstWeek + index - 1) % 7] == "土") {
       document.write(`<span class="weekEnd">${index}</span>`)
-      document.write(`<span class="weekEnd">(${week[(firstWeek + index - 1) % 7]}) </span>`)
+      // document.write(`<span class="weekEnd">(${week[(firstWeek + index - 1) % 7]}) </span>`)
     } else {
       document.write(`<span>${index}</span>`)
-      document.write(`<span>(${week[(firstWeek + index - 1) % 7]}) </span>`)
+      // document.write(`<span>(${week[(firstWeek + index - 1) % 7]}) </span>`)
     }
-    document.write(`</p>`)
+    document.write(`</div>`)
   }
+  }
+  document.write(`</div>`)
 
   switch (week[i]) {
     case i == 0:
@@ -51,7 +70,7 @@
       this.span.classList.add("Sat")
       break
     default:
-      document.write("")
+      // document.write("")
   }
   // document.write(`<br>`)
 
