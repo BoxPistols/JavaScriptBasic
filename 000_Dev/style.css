@@ -4,7 +4,7 @@ body {
   padding: 0 3%;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
-*{
+* {
   box-sizing: border-box;
 }
 .clalArea {
@@ -14,10 +14,12 @@ body {
 .break {
   display: none;
 }
-.days, .weeks {
+.days,
+.weeks {
   display: flex;
 }
-.day, .week{
+.day,
+.week {
   text-align: center;
   line-height: 2;
   min-width: 42px;
@@ -26,4 +28,10 @@ body {
 }
 .weekEnd {
   color: pink;
+}
+.todos li {
+  cursor: pointer;
+}
+.moge {
+  color: teal;
 }
